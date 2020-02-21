@@ -4,21 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="singolo1.css">
   <title>Singolo</title>
 </head>
 <body>
   <div class="wrapper">
     <header>
-      <h1>Singolo<span>*</span></h1>
-      <div class="navigation">
-        <p>Home</p>
-        <p>Services</p>
-        <p>Portfolio</p>
-        <p>About</p>
-        <p>Contact</p>
-      </div>
+      <h1>SINGOLO<p>*</p></h1>
+      <ul class="navigation">
+        <li>HOME</li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
     </header>
     <section class="phones">
+      <div class="slider">
+        <img src="./assets/icons/chev-left.svg" alt="left slider" class="left-slider">
+        <img src="./assets/icons/chev-right.svg" alt="right slider" class="right-slider">
+      </div>
       <img class="vertical-phone" src="./assets/icons/iPhone Vertical.svg" alt="vertical phone">
       <img class="horizontal-phone" src="./assets/icons/iPhone Horizontal.svg" alt="horizontal phone">
     </section>
@@ -26,35 +31,47 @@
       <h2>Our Services</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="service-blocks">
-        <div class="blocks">
+        <div class="blocks custom-block">
           <img src="./assets/icons/pen.svg" alt="Custom design">
-          <h3>Custom Design</h3>
-          <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+          <div class="service-text">
+            <h3>Custom Design</h3>
+            <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+          </div>
         </div>
-        <div class="blocks">
+        <div class="blocks inovative-block">
           <img src="./assets/icons/lightbulb.svg" alt="Inovative ideas">
-          <h3>Inovative Ideas</h3>
-          <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+          <div class="service-text">
+            <h3>Inovative Ideas</h3>
+            <p>Quisque luctus, quam eget molestie com-<wbr>modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+          </div>
         </div>
-        <div class="blocks">
+        <div class="blocks love-block">
           <img src="./assets/icons/heart.svg" alt="Love is the answer">
-          <h3>Love Is The Answer</h3>
-          <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+          <div class="service-text">
+            <h3>Love Is The Answer</h3>
+            <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+          </div>
         </div>
-        <div class="blocks">
+        <div class="blocks responsive-block">
           <img src="./assets/icons/phone.svg" alt="Responsive layout">
-          <h3>Responsive Layout</h3>
-          <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+          <div class="service-text">
+            <h3>Responsive Layout</h3>
+            <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+          </div>
         </div>
-        <div class="blocks">
+        <div class="blocks support-block">
           <img src="./assets/icons/bubble.svg" alt="24/7 support">
-          <h3>24 / 7 Support</h3>
-          <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
+          <div class="service-text">
+            <h3>24 / 7 Support</h3>
+            <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen-<wbr>tesque egestas venenatis lorem .</p>
+          </div>
         </div>
-        <div class="blocks">
+        <div class="blocks feel-block">
           <img src="./assets/icons/star.svg" alt="Feel like a star">
-          <h3>Feel Like A Star</h3>
-          <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+          <div class="service-text">
+            <h3>Feel Like A Star</h3>
+            <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+          </div>
         </div>
       </div>
     </section>
