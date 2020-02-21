@@ -1,4 +1,5 @@
 .wrapper {
+  position: relative;
   margin: 0 auto;
   width: 1020px;
 }
@@ -26,19 +27,11 @@ body {
 /* header */
 
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   height: 89px;
   background-color: #2d303a;
-}
-
-header:after {
-  content: "";
-  width: 1020px;
-  height: 6px;
-  background-color: #323746;
-  position: absolute;
-  top: 89px;
 }
 
 h1 {
@@ -49,6 +42,18 @@ h1 {
   font-family: "Lato";
   font-weight: 700;
   color: #ffffff;
+}
+
+h1:hover{
+  cursor: pointer;
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 h1 p {
@@ -70,6 +75,15 @@ ul.navigation {
 ul.navigation li a {
   text-decoration: none;
   color: #ffffff;
+}
+
+ul.navigation li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+ul.navigation li a:hover {
+  color: #f06c64;
 }
 
 .navigation > li:nth-child(1) {
@@ -96,17 +110,55 @@ ul.navigation li+li:before {
   top: 287px;
 }
 
+.right-slider:hover {
+  cursor: pointer;
+}
+
+.right-slider:active {
+  transform: scale(1.1);
+  transition: all ease 50ms;
+}
+
 .left-slider {
   top: 287px;
   position: relative;
   left: 42px;
 }
 
+.left-slider:hover {
+  cursor: pointer;
+}
+
+.left-slider:active {
+  transform: scale(1.1);
+  transition: all ease 50ms;
+}
+
 .phones {
+  position: relative;
   display: flex;
   background-color: #f06c64;
   height: 606px;
 }
+
+.phones:after {
+  content: "";
+  width: 1020px;
+  height: 6px;
+  background-color: #ea676b;
+  position: absolute;
+  bottom: 0;
+}
+
+.phones:before {
+  content: "";
+  width: 1020px;
+  height: 6px;
+  background-color: #323746;
+  position: absolute;
+  top: 0;
+}
+
 
 .vertical-phone {
   margin: -36px 0px 10px 74px;
@@ -128,9 +180,19 @@ ul.navigation li+li:before {
 
 .services {
   padding: 0 40px;
+  height: 496px;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
+}
+
+.wrapper:after {
+  content: "";
+  width: 1020px;
+  height: 6px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
 }
 
 .services h2 {
