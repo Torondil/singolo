@@ -44,6 +44,7 @@ h2 {
   padding-left: 40px;
   padding-top: 45px;
   background-color: #2d303a;
+  border-bottom: solid 6px rgb(50, 55, 70);
 }
 
 .portfolio>p {
@@ -69,12 +70,23 @@ h2 {
   border-radius: 5px;
   border: 1px solid #666d89;
   font-size: 12px;
-  line-height: 21px;
+  line-height: 19px;
   color: #767e9e;
   font-family: "Lato";
   padding-left: 7px;
   padding-right: 7px;
   margin-right: 9px;
+}
+
+.types p:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease 50ms;
+}
+
+.types > p:nth-child(1) {
+  border: 1px solid #c5c5c5;
+  color: #c5c5c5;
 }
 
 .types > p:nth-child(3) {
@@ -93,7 +105,11 @@ h2 {
   display: grid;
   grid-gap: 20px;
   grid-auto-columns: max-content;
-  padding-bottom: 73px;
+  padding-bottom: 67px;
+}
+
+.portfolio_images img:nth-child(n+13) {
+  display: none;
 }
 
 .portfolio_images > img:nth-child(1) {
@@ -137,6 +153,7 @@ h2 {
 .about_us {
   padding-left: 40px;
   padding-top: 44px;
+  border-bottom: solid 6px #ffffff;
 }
 
 .about_us h2 {
@@ -180,6 +197,8 @@ h2 {
   margin-top: 11px;
   margin-bottom: 10px;
   letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .worker_profile p {
@@ -203,4 +222,10 @@ div.worker_profile:nth-child(3) > p:nth-child(3) {
 
 .socials img {
   padding-right: 2px;
+}
+
+.socials img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease 50ms;
 }
