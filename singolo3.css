@@ -42,9 +42,10 @@ body {
 
 .form_section {
   background-color: #f06c64;
-  min-height: 91.3vh;
+  min-height: 90.45vh;
   padding-left: 41px;
   padding-top: 0px;
+  border-bottom: 6px solid #ea676b;
 }
 
 .form_section h2 {
@@ -120,7 +121,7 @@ form > * {
   letter-spacing: -0.004em;
   line-height: 22px;
   text-align: justify;
-  hyphens: manual;
+  hyphens: auto;
 }
 
 .contact_info .address,
@@ -179,5 +180,33 @@ footer {
 }
 
 .social_icons {
-  margin-right: 43px;
+  margin-right: 44px;
+}
+
+.social_icons img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease 50ms;
+}
+
+.contact_info > p:nth-child(2) {
+  padding-right: -2px;
+  margin-right: -16px;
+  padding-top: 0px;
+}
+
+.contact_info > h3:nth-child(1) {
+  margin-bottom: 9px;
+}
+
+button {
+  padding: 5px;
+  color: #f48c8f;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21.56px;
+  background-color: #d6554f;
+  border-radius: 5px;
+  border-color: #f48c8f;
 }
