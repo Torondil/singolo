@@ -42,10 +42,10 @@ body {
 
 .form_section {
   background-color: #f06c64;
-  min-height: 90.45vh;
   padding-left: 41px;
   padding-top: 0px;
   border-bottom: 6px solid #ea676b;
+  padding-bottom: 16px;
 }
 
 .form_section h2 {
@@ -154,6 +154,18 @@ form > * {
   background: transparent url("assets/icons/mail.svg") no-repeat left 7px;
 }
 
+button {
+  padding: 5px;
+  color: #f48c8f;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21.56px;
+  background-color: #d6554f;
+  border-radius: 5px;
+  border-color: #f48c8f;
+}
+
 footer {
   padding-top: 22px;
   padding-bottom: 19px;
@@ -165,9 +177,8 @@ footer {
 
 footer .copyright {
   margin-top: -4px;
-  font-weight: 300;
   font-size: 12px;
-  letter-spacing: -0.004em;
+  letter-spacing: 0.01em;
   color: #575d74;
 }
 
@@ -180,7 +191,12 @@ footer {
 }
 
 .social_icons {
-  margin-right: 44px;
+  display: flex;
+  margin-right: 39px;
+}
+
+.social_icons img {
+  padding-left: 6px;
 }
 
 .social_icons img:hover {
@@ -197,16 +213,4 @@ footer {
 
 .contact_info > h3:nth-child(1) {
   margin-bottom: 9px;
-}
-
-button {
-  padding: 5px;
-  color: #f48c8f;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21.56px;
-  background-color: #d6554f;
-  border-radius: 5px;
-  border-color: #f48c8f;
 }
