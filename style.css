@@ -84,17 +84,20 @@ ul.navigation li a {
   color: #ffffff;
 }
 
-ul.navigation li:hover {
+ul.navigation a:hover {
   cursor: pointer;
-  color: white;
 }
 
 ul.navigation li a:hover {
   color: #f06c64;
 }
 
-.navigation > li:nth-child(1) {
+.navigation .navigation_active {
   color: #f06c64;
+}
+
+.navigation .navigation_unactive {
+  color: #ffffff;
 }
 
 ul.navigation li+li:before {
