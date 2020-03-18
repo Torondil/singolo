@@ -185,7 +185,6 @@ ul.navigation li+li:before {
   top: 0;
 }
 
-
 .vertical-phone {
   margin: -36px 0px 10px 74px;
   background-image: url(./assets/icons/Shadow-vertical.svg);
@@ -194,12 +193,32 @@ ul.navigation li+li:before {
   background-position-y: 95px;
 }
 
+.horizontal-phone_off {
+  height: 188px;
+  width: 333px;
+  position: absolute;
+  background-color: #161616;
+  top: 193px;
+  right: 201px;
+  display: none;
+}
+
 .horizontal-phone {
   margin: 10px 10px -114px -332px;
   background-image: url(./assets/icons/Shadow-horizontal.svg);
   background-repeat: no-repeat;
   background-position-x: 67px;
   background-position-y: 170px;
+}
+
+.vertical-phone_off {
+  width: 189px;
+  height: 333px;
+  position: absolute;
+  background-color: #161616;
+  top: 124px;
+  left: 126px;
+  display: none;
 }
 
 /* section .services */

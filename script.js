@@ -4,6 +4,7 @@ window.onload = function() {
   addTagsClickHandler();
   addSliderClickHandler();
   addSliderBackClickHandler();
+  addPhonesOffClickHandler();
 }
 
 const addTagsClickHandler = () => {
@@ -59,4 +60,39 @@ const returnSlider = () => {
   slider_2.style.display = 'none';
   let previousSlider = document.querySelector('.phones');
   previousSlider.style.display = 'flex';
+}
+
+// phones off
+
+const addPhonesOffClickHandler = () => {
+  document.querySelector('.wrapper_phones').addEventListener('click', (e) => {
+    if (e.target.classList.contains('vertical-phone')) {
+      verticalPhoneOff();
+    } else
+    if (e.target.classList.contains('vertical-phone_off')) {
+      verticalPhoneOn();
+    } else
+    if (e.target.classList.contains('horizontal-phone')) {
+      horizontalPhoneOff();
+    } else
+    if (e.target.classList.contains('horizontal-phone_off')) {
+      horizontalPhoneOn();
+    }
+  })
+}
+
+const verticalPhoneOff = () => {
+  document.querySelector('.vertical-phone_off').style.display = 'block';
+}
+
+const verticalPhoneOn = () => {
+  document.querySelector('.vertical-phone_off').style.display = 'none';
+}
+
+const horizontalPhoneOff = () => {
+  document.querySelector('.horizontal-phone_off').style.display = 'block';
+}
+
+const horizontalPhoneOn = () => {
+  document.querySelector('.horizontal-phone_off').style.display = 'none';
 }
