@@ -151,6 +151,22 @@ ul.navigation li+li:before {
   height: 606px;
 }
 
+.phones_2 {
+  display: none;
+  position: relative;
+  height: 606px;
+  background-image: url(./assets/icons/Slider2.svg);
+}
+
+.phones_2:before {
+  content: "";
+  width: 1020px;
+  height: 6px;
+  background-color: #323746;
+  position: absolute;
+  top: 0;
+}
+
 .phones:after {
   content: "";
   width: 1020px;
