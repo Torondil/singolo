@@ -1,10 +1,10 @@
 window.onload = function() {
-
   // Tags
   addTagsClickHandler();
   addSliderClickHandler();
   addSliderBackClickHandler();
   addPhonesOffClickHandler();
+  typeSelectedClickHandler();
 }
 
 const addTagsClickHandler = () => {
@@ -96,3 +96,38 @@ const horizontalPhoneOff = () => {
 const horizontalPhoneOn = () => {
   document.querySelector('.horizontal-phone_off').style.display = 'none';
 }
+
+// select types
+
+const typeSelectedClickHandler = () => {
+  document.querySelector('.types').addEventListener('click', (e) => {
+    if (e.target.classList.contains('type')) {
+      let clickedTag = e.target;
+      removeSelectedType();
+      selectClickedType(clickedTag);
+    }
+  })
+}
+
+const removeSelectedType = () => {
+  let tags = document.querySelectorAll('.type');
+  tags.forEach(tag => {
+    tag.classList.remove('active_type');
+    tag.classList.add('unactive_type');
+  })
+}
+
+const selectClickedType = (clickedTag) => {
+  clickedTag.classList.add('active_type');
+  clickedTag.classList.remove('unactive_type');
+  document.querySelector('.portfolio_images').querySelectorAll('.port_image').forEach(element => {
+    element.style.order = Math.floor(1 + Math.random() * 12);
+});
+}
+
+const randomPics = document.querySelector('.portfolio_images');
+
+randomPics.addEventListener('click', (event) => {
+    randomPics.querySelectorAll('.port_image').forEach(element => element.classList.remove('active_pic'));
+    event.target.classList.add('active_pic');
+});
