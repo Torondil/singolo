@@ -2,4 +2,4 @@
 
 | Final |
 | - |
-| **[Full site deploy](https://torondil.github.io/singolo/singolo.html)** |
+| **[Full site deploy](https://torondil.github.io/singolo/)** |

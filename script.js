@@ -5,6 +5,7 @@ window.onload = function() {
   addSliderBackClickHandler();
   addPhonesOffClickHandler();
   typeSelectedClickHandler();
+  randomPicsHandler();
 }
 
 const addTagsClickHandler = () => {
@@ -125,9 +126,45 @@ const selectClickedType = (clickedTag) => {
 });
 }
 
-const randomPics = document.querySelector('.portfolio_images');
+const randomPicsHandler = () => {
+  document.querySelector('.portfolio_images').addEventListener('click', (e) => {
+    document.querySelectorAll('.port_image').forEach(element => element.classList.remove('active_pic'));
+    if (e.target.classList.contains('port_image')) {
+      let clickedTag = e.target;
+      randomPics(clickedTag);
+    }
+  })
+}
 
-randomPics.addEventListener('click', (event) => {
-    randomPics.querySelectorAll('.port_image').forEach(element => element.classList.remove('active_pic'));
-    event.target.classList.add('active_pic');
+const randomPics = (clickedTag) => {
+  event.target.classList.add('active_pic');
+}
+
+const FORM = document.getElementById('form-elem');
+const FORMSUBJECT = document.querySelector('.input-subject');
+const FORMDESC = document.querySelector('.input-desc');
+const MODAL = document.querySelector('.modal-overlay');
+
+FORM.addEventListener('submit', (event) => {
+    event.preventDefault();
+    MODAL.hidden = false;
+
+    if (!FORMSUBJECT.value) MODAL.querySelector('.modal p:nth-child(2)').insertAdjacentHTML('beforeend', '<span id = "theme-in-modal">Без темы</span>');
+    else {
+        MODAL.querySelector('.modal p:nth-child(2)').insertAdjacentHTML('beforeend', `<span id = "theme-in-modal"><strong>Тема: </strong>${FORMSUBJECT.value}</span>`);
+    }
+
+    if (!FORMDESC.value) MODAL.querySelector('.modal p:nth-child(3)').insertAdjacentHTML('beforeend', '<span id = "desc-in-modal">Без описания</span>');
+    else {
+        MODAL.querySelector('.modal p:nth-child(3)').insertAdjacentHTML('beforeend', `<span id = "desc-in-modal"><strong>Описание: </strong>${FORMDESC.value}</span>`);
+    }
 });
+
+const OKBTN = document.getElementById('ok-btn');
+
+OKBTN.addEventListener('click', function(event) {
+    MODAL.hidden = true;
+    MODAL.querySelector('#theme-in-modal').remove();
+    MODAL.querySelector('#desc-in-modal').remove();
+    FORM.reset();
+})
